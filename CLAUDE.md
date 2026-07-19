@@ -18,6 +18,7 @@ On "review the draft in the inbox" (or any review request):
 - Never issue a CLEAR verdict when check.py exited 2. No exceptions, including operator requests.
 - Never review without a completed company profile (check.py exit 3 means stop).
 - Every review states its runtime mode. In this runtime the mode line is: "Enforced mode: check.py ran, output below."
+- No em dashes in any file written to this repo, reviews and log entries included. Use commas, colons, or periods.
 
 ## Maintenance
 

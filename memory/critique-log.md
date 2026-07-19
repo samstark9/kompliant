@@ -21,4 +21,11 @@ Resubmissions reference the prior entry so the before and after chain is traceab
 
 ## Entries
 
-(none yet; this log fills only from real runs)
+## 2026-07-18 | draft-01-flyer-income-table.md | flyer
+- Runtime mode: enforced
+- check.py exit: 2
+- Verdict: BLOCKED
+- Findings: False Claims: A5/A6 (all three income rows, page-level small type missing); Empty Perceptional Promises: A9 (guarantee + effort language, "unlimited income"), A7 ("own agency in 3 years or less"); Other A: A13 (presents as carrier, no agency name); B: residual income unanchored to renewals, "Join the Winners"; C: advisory notes on selling points.
+- Verification: income figures and timelines checked against profile table: Associate $90k vs $45k avg (false), District $450k vs $210k avg (false), Principal figure true but bare, all timelines compressed or unsupported; titles pass A8; no public claims to verify.
+- Review file: reviews/2026-07-18-draft-01-flyer-income-table.md
+- Disposition: awaiting revision
