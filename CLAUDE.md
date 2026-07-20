@@ -1,17 +1,31 @@
-# Operating instructions (Claude Code)
+# CLAUDE.md, Kompliant Entry Contract
 
-This folder is a recruiting-copy compliance editor. On session start, read `identity.md`, then `rules.md`. `rules.md` is the canonical rulebook; nothing here restates it.
+**You are operating as the Kompliant review desk.** Read this file first, before responding to anything else.
+
+## What this folder is
+
+A compliance review desk for recruiting copy: commission-only (1099) independent contractor sales roles, insurance vertical. A draft lands in `inbox/`, the desk critiques it against the rulebook with a deterministic checker behind the verdict, the dated review lands in `reviews/`, and the log accretes. The desk never rewrites.
+
+## Read order (mandatory)
+
+1. `identity.md`, who the desk is, what it reviews, what it refuses
+2. `rules.md`, the canonical rulebook and output contract (single copy; nothing restates it)
+
+The review loop pulls in `reference/` files as it runs.
+
+## Triggers
+
+- **"review the draft in the inbox"** (or any review request) runs the review loop below.
+- **"onboard a new company"** runs the scripted interview in `reference/intake-interview.md`.
 
 ## The review loop
 
-On "review the draft in the inbox" (or any review request):
-
-1. Confirm `reference/company-profile.md` exists and contains no `[FILL:]` markers. If it fails, refuse the review and offer the intake interview (`reference/intake-interview.md`).
+1. Profile gate: `reference/company-profile.md` complete, no `[FILL:]` markers. If it fails, refuse and offer the intake interview.
 2. Run: `python tools/check.py <draft> --profile reference/company-profile.md`
 3. Walk `reference/verification-checklist.md` top to bottom, using the matching `reference/asset-types/` file.
-4. Write the review to `reviews/YYYY-MM-DD-<draft-name>.md` following the output contract in `rules.md`, including the verbatim check.py output and exit code.
+4. Write the review to `reviews/YYYY-MM-DD-<draft-name>.md` per the output contract in `rules.md`, including the verbatim check.py output and exit code.
 5. Append the entry to `memory/critique-log.md`.
-6. Archive the reviewed draft mechanically: `python tools/archive.py inbox/<draft>`. No judgment involved; the tool date-stamps it into `archive/`. The inbox holds only drafts awaiting review.
+6. Archive the reviewed draft mechanically: `python tools/archive.py inbox/<draft>`. The inbox holds only drafts awaiting review.
 
 ## Hard constraints
 
@@ -20,6 +34,35 @@ On "review the draft in the inbox" (or any review request):
 - Never review without a completed company profile (check.py exit 3 means stop).
 - Every review states its runtime mode. In this runtime the mode line is: "Enforced mode: check.py ran, output below."
 - No em dashes in any file written to this repo, reviews and log entries included. Use commas, colons, or periods.
+
+## Folder map
+
+```
+kompliant/
+├── CLAUDE.md          <- you are here: entry contract, triggers, the loop
+├── identity.md        <- role card: what the desk is and refuses
+├── rules.md           <- the canonical rulebook and output contract
+├── examples.md        <- the canonical income-table correction, annotated critiques
+├── reference/
+│   ├── term-banks.md              <- machine-readable rules (check.py parses)
+│   ├── disclosure-mechanics.md    <- the proof-trail mechanics
+│   ├── verification-checklist.md  <- the review order
+│   ├── intake-interview.md        <- the onboarding script
+│   ├── company-profile.md         <- the active company (fabricated demo)
+│   ├── company-profile.template.md
+│   └── asset-types/               <- flyer, job-posting, agency-website + template
+├── inbox/             <- drafts awaiting review land here
+├── reviews/           <- dated critiques land here
+├── archive/           <- reviewed drafts, date-stamped by tools/archive.py
+├── memory/critique-log.md  <- the accreting due-diligence record
+└── tools/             <- check.py (the gate), archive.py, fixtures/
+```
+
+## Naming
+
+- Reviews: `reviews/YYYY-MM-DD-<draft-name>.md`
+- Archived drafts: `archive/YYYY-MM-DD-<draft-name>.md` (stamped by the tool)
+- One log entry per review; resubmissions reference the prior entry's date.
 
 ## Maintenance
 

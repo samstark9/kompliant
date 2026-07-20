@@ -1,3 +1,10 @@
+---
+file-type: machine-readable rules
+workspace: kompliant
+last-updated: 2026-07-20
+status: active, parsed by tools/check.py
+---
+
 # Term banks (machine readable)
 
 `tools/check.py` parses this file. Every line of the form below is a live rule; everything else is ignored by the parser.

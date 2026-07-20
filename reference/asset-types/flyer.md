@@ -1,3 +1,10 @@
+---
+file-type: asset-type
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Asset type: Flyer
 
 Printed or digital one-page recruiting piece. The income table lives here more than anywhere else, which makes the flyer the highest-stakes asset for the False Claims and Empty Perceptional Promises families.

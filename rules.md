@@ -1,3 +1,10 @@
+---
+file-type: rulebook
+workspace: kompliant
+last-updated: 2026-07-20
+status: active, canonical copy
+---
+
 # Rules
 
 This file is the canonical copy of the editor's stance and rulebook. Every other file in this folder points here. If another file appears to restate a rule, this file wins.

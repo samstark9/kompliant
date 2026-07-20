@@ -1,3 +1,10 @@
+---
+file-type: skill
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Intake interview
 
 The scripted "onboard a new company" interview. Run it when the operator says "onboard a new company," "set up a profile," or attempts a review with no completed profile.

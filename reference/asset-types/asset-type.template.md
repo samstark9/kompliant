@@ -1,3 +1,10 @@
+---
+file-type: asset-type
+workspace: kompliant
+last-updated: 2026-07-20
+status: blank template
+---
+
 # Asset type: [FILL: asset name]
 
 [FILL: one paragraph. What this asset is, where it appears, and why it carries the risk profile it does.]

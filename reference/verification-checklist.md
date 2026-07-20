@@ -1,3 +1,10 @@
+---
+file-type: checklist
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Verification checklist
 
 The review order. Every review walks this list top to bottom, whole document first. No sampling, no skimming. C4 in `rules.md`: read the entire document front to back.

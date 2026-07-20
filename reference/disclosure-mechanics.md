@@ -1,3 +1,10 @@
+---
+file-type: reference
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Disclosure mechanics
 
 The proof-trail requirement from `rules.md` (A5, A6, A7), in mechanical detail. `tools/check.py` enforces the machine-checkable parts.

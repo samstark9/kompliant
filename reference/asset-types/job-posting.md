@@ -1,3 +1,10 @@
+---
+file-type: asset-type
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Asset type: Job posting
 
 Postings on hiring platforms and professional networks. This is where title-washing lives, because postings are the least-reviewed surface in the channel (B6): a softened title might "work" in a posting precisely because postings evade review. The rules are identical anyway.

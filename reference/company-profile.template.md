@@ -1,3 +1,10 @@
+---
+file-type: company-profile
+workspace: kompliant
+last-updated: 2026-07-20
+status: blank template
+---
+
 # Company Profile: [FILL: carrier legal name]
 
 Completed via the intake interview in `reference/intake-interview.md`. `tools/check.py` refuses to run while any `[FILL:]` marker remains in the active profile.

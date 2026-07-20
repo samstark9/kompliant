@@ -1,3 +1,10 @@
+---
+file-type: examples
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Examples
 
 Worked examples of the rulebook applied. Rules live in `rules.md`; this file only shows them in action. All company names and figures are from the fabricated demo profile in `reference/company-profile.md`.

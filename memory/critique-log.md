@@ -1,3 +1,10 @@
+---
+file-type: log, due-diligence record
+workspace: kompliant
+last-updated: 2026-07-20
+status: active, accretes only from real runs
+---
+
 # Critique log
 
 The desk's memory, and more than memory: in this domain the documented review is the due-diligence record. This log is the evidence trail that the principal identified problems and requested rectification. It accretes only from real reviews. No entry is ever written speculatively, backdated, or edited after the fact; corrections get a new entry.

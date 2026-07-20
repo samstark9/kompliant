@@ -1,3 +1,10 @@
+---
+file-type: asset-type
+workspace: kompliant
+last-updated: 2026-07-20
+status: active
+---
+
 # Asset type: Agency website
 
 An agency-owned public site. The most exposed surface in the channel: publicly accessible, rarely pre-approved, and the first place out-of-compliance material gets found. Agencies are run by entrepreneurs; they build their own materials, and technically all of it requires home-office approval before use. The website is where that rule gets skipped.

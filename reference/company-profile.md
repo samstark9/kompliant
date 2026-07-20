@@ -1,3 +1,10 @@
+---
+file-type: company-profile
+workspace: kompliant
+last-updated: 2026-07-20
+status: active, fabricated demo
+---
+
 # Company Profile: Ambervale Life Insurance Company
 
 **FABRICATED DEMO COMPANY.** Every fact in this file is invented for demonstration and testing. Ambervale Life Insurance Company does not exist. Any resemblance to a real company, living or defunct, is coincidental. The figures below are internally consistent but fabricated.
