@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marked-up copy: 2026-07-20-draft-01-flyer-income-table-rev2.md</title>
+<style>
+:root {
+  --paper: #fffdf7; --ink: #23211b; --faint: #6b675e; --hairline: #e4dfd1;
+  --wash: #fdf3d6; --mark: #ffe9a4; --note-accent: #8a2b2b; --margin-w: 19rem;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: #eeeae1; color: var(--ink);
+  font: 16px/1.55 Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+.page { max-width: 74rem; margin: 2.25rem auto 0; padding: 0 1.25rem; }
+.masthead {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: .75rem 1.5rem; flex-wrap: wrap;
+  border-bottom: 3px double #b3ab99; padding-bottom: .7rem; margin-bottom: 1.25rem;
+}
+.brand { font-variant: small-caps; letter-spacing: .3em; white-space: nowrap; }
+.brand .k { font-size: 1.45rem; font-weight: 700; margin-right: .7rem; }
+.brand .sub { font-size: .95rem; color: var(--faint); }
+.chips { display: flex; gap: .45rem; flex-wrap: wrap; }
+.chip {
+  display: inline-block; border: 1px solid #cdc5b2; border-radius: 999px;
+  background: #faf7ee; padding: .1rem .6rem; font-size: .72rem; color: #56524a;
+  font-family: ui-monospace, Menlo, Consolas, monospace; white-space: nowrap;
+}
+.chip.rule { background: #3a352d; border-color: #3a352d; color: #f3efe4; }
+.banner { border-radius: 6px; color: #fff; padding: .95rem 1.25rem; margin-bottom: 1.5rem; }
+.banner .verdict { font-size: 1.4rem; font-weight: 700; letter-spacing: .14em; }
+.banner .subtitle { opacity: .93; font-size: .95rem; margin-top: .2rem; }
+.v-blocked { background: #6e1a1a; }
+.v-revise { background: #9c5e07; }
+.v-clear { background: #1d6a38; }
+.v-other { background: #4b5563; }
+.paper {
+  background: var(--paper); border: 1px solid var(--hairline);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .14); padding: 3rem 3.25rem;
+}
+.row { display: grid; grid-template-columns: minmax(0, 1fr) var(--margin-w); column-gap: 2.25rem; }
+.paper.no-anchors .row { grid-template-columns: minmax(0, 1fr); }
+.copy { min-width: 0; }
+.copy h1 { font-size: 1.7rem; line-height: 1.25; margin: .2rem 0 .9rem; }
+.copy h2 { font-size: 1.35rem; margin: .4rem 0 .7rem; }
+.copy h3, .copy h4, .copy h5, .copy h6 { font-size: 1.1rem; margin: .4rem 0 .6rem; }
+.copy p { margin: .55rem 0; }
+.copy .hit { background: var(--wash); }
+mark { background: var(--mark); padding: 0 .12em; }
+sup.m {
+  font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .62em;
+  font-weight: 700; color: var(--note-accent); margin-left: .18em;
+}
+table { border-collapse: collapse; width: 100%; margin: .8rem 0; }
+th, td { border: 1px solid var(--hairline); padding: .42rem .7rem; text-align: left; }
+th { background: #f5f1e4; font-variant: small-caps; letter-spacing: .05em; }
+tr.hit th, tr.hit td { background: var(--wash); }
+.margin { font-size: .78rem; line-height: 1.5; color: #3e3b33; padding-top: .35rem; }
+.mnote { border-left: 2px solid #b3ab99; padding: .05rem 0 .1rem .7rem; margin: 0 0 .95rem; }
+.mnote .mhead { margin-bottom: .15rem; }
+.mnote .num {
+  font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 700;
+  color: var(--note-accent); margin-right: .4rem;
+}
+.mnote .ntitle { font-weight: 700; margin-top: .25rem; }
+.mnote blockquote { margin: .25rem 0 0; font-style: italic; color: #6a3030; }
+.mnote .nbody { margin: .25rem 0 0; }
+.mnote .ntag { font-size: .68rem; font-style: italic; color: #8f8a7c; margin-top: .3rem; }
+.noterow { display: none; }
+.noterow td { background: #fbf6e8; }
+.wholedoc, .forms { margin-top: 1.9rem; }
+.wholedoc h2, .forms h2 {
+  font-variant: small-caps; letter-spacing: .16em; font-size: 1rem; font-weight: 700;
+  border-bottom: 1px solid #b3ab99; padding-bottom: .3rem; margin: 0 0 .9rem;
+}
+.notegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr)); gap: .9rem; }
+.card {
+  background: var(--paper); border: 1px solid var(--hairline);
+  border-left: 3px solid #b3ab99; padding: .65rem .8rem;
+  font-size: .82rem; line-height: 1.5;
+}
+.card .ntitle { font-weight: 700; margin-top: .3rem; }
+.card blockquote { margin: .3rem 0 0; font-style: italic; color: #6a3030; }
+.card .nbody { margin: .3rem 0 0; }
+.card .ntag { font-size: .68rem; font-style: italic; color: #8f8a7c; margin-top: .35rem; }
+.forms p { font-size: .88rem; margin: .4rem 0; }
+@media (max-width: 900px) {
+  .page { margin-top: 1.25rem; }
+  .paper { padding: 1.4rem 1.1rem; }
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .margin { padding: 0; }
+  .mnote {
+    background: #fbf6e8; border: 1px solid #ded6c0;
+    border-left: 3px solid var(--note-accent);
+    padding: .5rem .7rem; margin: .35rem 0 .85rem;
+  }
+  .row.tablerow .margin { display: none; }
+  .noterow { display: table-row; }
+}
+@media print {
+  body { background: #fff; font-size: 12px; }
+  .page { margin: 0; max-width: none; padding: 0; }
+  .paper { box-shadow: none; padding: 1.5rem; }
+  .paper:not(.no-anchors) .row { grid-template-columns: minmax(0, 1fr) 15rem; }
+  .margin { display: block; padding-top: .35rem; }
+  .mnote {
+    background: none; border: none; border-left: 2px solid #b3ab99;
+    padding: .05rem 0 .1rem .7rem; margin: 0 0 .95rem;
+  }
+  .row.tablerow .margin { display: block; }
+  .noterow { display: none; }
+  .banner, .chip, th, tr.hit th, tr.hit td, mark, .copy .hit {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page"><header class="masthead"><div class="brand"><span class="k">Kompliant</span><span class="sub">Review Desk</span></div><div class="chips"><span class="chip">Reviewed 2026-07-20</span><span class="chip">Flyer</span><span class="chip">2026-07-20-draft-01-flyer-income-table-rev2.md</span><span class="chip">Resubmission</span></div></header><section class="banner v-clear"><div class="verdict">CLEAR</div><div class="subtitle">No blocking findings. Remaining notes are advisory, and the call is yours.</div></section><article class="paper no-anchors"><div class="row"><div class="copy"><h1>Build Your Sales Career with Northlake Agency Group</h1></div><aside class="margin"></aside></div><div class="row"><div class="copy"><p>Career advancement timeline:</p></div><aside class="margin"></aside></div><div class="row tablerow"><div class="copy"><table><tr><th>Career Level</th><th>Income*</th><th>Time to Achieve*</th></tr><tr><td>Associate Agent</td><td>$45,000</td><td>n/a</td></tr><tr><td>Senior Agent</td><td>$110,000</td><td>2+ years</td></tr><tr><td>District Agent</td><td>$210,000</td><td>3+ years</td></tr><tr><td>Principal Agent</td><td>$900,000+</td><td>6+ years</td></tr></table></div><aside class="margin"></aside></div><div class="row"><div class="copy"><p>Agents can also qualify for incentive trips to top destinations, and earn residual income through renewals.</p></div><aside class="margin"></aside></div><div class="row"><div class="copy"><p>Talk with us about the next chapter of your career.</p></div><aside class="margin"></aside></div><div class="row"><div class="copy"><p>*Stated figures are averages per 2025 end-of-year internal sales reporting, Ambervale Life Insurance Company. Actual results are based on individual performance and are not guaranteed. Income is commission-based. Northlake Agency Group is an independent agency offering Ambervale Life insurance products.</p></div><aside class="margin"></aside></div></article><section class="wholedoc"><h2>Whole-document notes</h2><div class="notegrid"><div class="card"><div class="mhead"><span class="chip rule">A6</span></div><div class="ntitle">proof trail: resolved</div><p class="nbody">Column-header asterisks on &quot;Income*&quot; and &quot;Time to Achieve*&quot; cover their columns, and the small type states &quot;averages&quot; once for the page, both per the standing calibration ruling. The source line sits on the same page, cites a completed year (2025) and a named source (Ambervale Life Insurance Company internal sales reporting), and includes &quot;not guaranteed.&quot;</p><div class="ntag">Class A, other</div></div><div class="card"><div class="mhead"><span class="chip rule">A8</span></div><div class="ntitle">titles: pass</div><p class="nbody">Associate Agent, Senior Agent, District Agent, Principal Agent. All four exist in the profile ladder, in order, and every management title carries Agent.</p><div class="ntag">Class A, other</div></div><div class="card"><div class="mhead"><span class="chip rule">A13</span></div><div class="ntitle">brand identity: resolved</div><p class="nbody">The piece presents as Northlake Agency Group, the agency&#x27;s own name. The carrier appears only where it must: as the named source in the citation and in the independent-agency disclosure line, which correctly states the relationship. No carrier branding as identity.</p><div class="ntag">Class A, other</div></div><div class="card"><div class="mhead"><span class="chip rule">B</span></div><div class="ntitle">small-type wording</div><p class="nbody">The source line paraphrases the profile&#x27;s required text: &quot;Actual results are based on individual performance&quot; in place of &quot;Actual income and time to achieve are based on individual sales and recruiting performance.&quot; The substance survives (year, source, not guaranteed, averages), but the profile labels its wording required. Recommend swapping in the canonical sentence verbatim to remove any argument later.</p><div class="ntag">Class B: FLAG</div></div><div class="card"><div class="mhead"><span class="chip rule">B7</span></div><div class="ntitle">advisory</div><p class="nbody">&quot;Build Your Sales Career&quot; and the table-first structure are clean and professional. No design concerns visible in text form.</p><div class="ntag">Class B: FLAG</div></div><div class="card"><div class="mhead"><span class="chip rule">C2</span></div><p class="nbody">Incentive trips and residual income through renewals are the right selling points and correctly framed. Skills development and the association-partnership lead story remain available as additions if the piece feels thin.</p><div class="ntag">Class C: CRAFT</div></div><div class="card"><div class="mhead"><span class="chip rule">C4</span></div><p class="nbody">Read front to back. Structure is hook, table, incentives, CTA, small type. Sound.</p><div class="ntag">Class C: CRAFT</div></div><div class="card"><div class="mhead"><span class="chip rule">Note</span></div><div class="ntitle">Layout check</div><p class="nbody">This is a plain-text draft. The 8pt-minimum type size and same-page placement of the small type cannot be verified here and must be confirmed on the designed piece.</p><div class="ntag">Conditions outside this review</div></div><div class="card"><div class="mhead"><span class="chip rule">Note</span></div><div class="ntitle">Publication approval</div><p class="nbody">Per the profile&#x27;s branding rules, agency-created recruiting materials require home-office approval before publication. This review is the change-list step, not the approval.</p><div class="ntag">Conditions outside this review</div></div></div></section></div>
+</body>
+</html>
