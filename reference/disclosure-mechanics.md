@@ -21,6 +21,7 @@ Every stated figure, stat, or fact follows this chain, with no broken links:
   *Stated averages are per [completed year] end of year internal sales reporting, [Company]. Actual income and time to achieve are based on individual sales and recruiting performance, and are not guaranteed.
 
 - Top-earner figures may accompany averages if labeled as top earner, same convention.
+- The asterisk may sit on the column header; a header asterisk covers every figure in that column. "Averages" declared once in the small type covers the page; it does not need repeating beside each figure.
 
 ## Public facts and ratings
 
@@ -29,7 +30,7 @@ Every stated figure, stat, or fact follows this chain, with no broken links:
 
 ## What check.py verifies
 
-- Every money figure has an asterisk near the claim.
+- Every money figure is covered by an asterisk, on the figure or on its column header.
 - A same-page source line exists (a small-type line citing a year and source, containing "not guaranteed").
 - The cited year is a completed year.
 - Income-context figures carry a hedge ("can make up to" or a stated average).

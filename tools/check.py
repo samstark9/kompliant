@@ -140,6 +140,11 @@ def scan(draft_path, profile, term_rules):
     ladder_lower = {t.lower() for t in profile["ladder"]}
     money_lines = []
     source_lines = []
+    # Operator ruling 2026-07-20: "average" declared once in the small type
+    # hedges every figure on the page; no per-figure repetition required.
+    fine_print_text = " ".join(
+        l.strip().lower() for l in lines if l.strip().startswith("*"))
+    page_hedge = "average" in fine_print_text or "can make up to" in fine_print_text
 
     for i, line in enumerate(lines, start=1):
         stripped = line.strip()
@@ -183,14 +188,18 @@ def scan(draft_path, profile, term_rules):
             m = MONEY_PATTERN.search(line)
             if m:
                 money_lines.append(i)
-                if "*" not in line:
+                window = " ".join(lines[max(0, i - 1 - HEDGE_WINDOW): i])
+                context = line + " " + window
+                # Operator ruling 2026-07-20: a column-header asterisk covers
+                # every figure in its column (the header sits in the window).
+                if "*" not in context:
                     findings.append(Finding(
                         "A6", "BLOCK", i, snippet_of(m),
                         "Figure without an asterisk. Every stated figure carries an "
-                        "asterisk resolving to a same-page source line."))
-                window = " ".join(lines[max(0, i - 1 - HEDGE_WINDOW): i])
-                context = line + " " + window
-                if INCOME_CONTEXT.search(context) and not HEDGE_PATTERN.search(context):
+                        "asterisk resolving to a same-page source line, on the figure "
+                        "or on its column header."))
+                if INCOME_CONTEXT.search(context) and not (
+                        HEDGE_PATTERN.search(context) or page_hedge):
                     findings.append(Finding(
                         "A5", "BLOCK", i, snippet_of(m),
                         "Bare income claim. Acceptable forms: 'can make up to $X' with "
