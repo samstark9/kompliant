@@ -44,7 +44,7 @@ Banned-term banks (parsed from `reference/term-banks.md`), clock-time and schedu
 - The demo company (Ambervale Life Insurance Company) is fabricated. Every figure in its profile is invented.
 - The sample drafts in `tools/fixtures/drafts/` are synthetic: authored for the fabricated company, seeded with real violation patterns. Credential: 20 years in Fortune 500 marketing.
 - The rulebook is a practitioner's rulebook, not legal advice.
-- Entries in `reviews/` and `memory/critique-log.md` come only from real runs, committed dated, imperfections kept. The log ships empty by design.
+- Entries in `reviews/` and `memory/critique-log.md` come only from real runs, committed dated, imperfections kept. The log started empty; everything in it is a real dated run.
 
 ## Extending
 
@@ -60,7 +60,7 @@ rules.md                     the canonical rulebook and output contract (single 
 examples.md                  the canonical income-table correction and annotated critiques
 reference/                   term banks, disclosure mechanics, checklist, intake interview,
                              company profile + template, asset-types/
-inbox/ -> reviews/           the operating loop
+inbox/ -> reviews/           the operating loop; reviewed drafts date-stamp into archive/
 memory/critique-log.md       the accreting review record (doubles as the due-diligence trail)
 tools/check.py               the deterministic gate; tools/fixtures/ its test corpus
 ```
