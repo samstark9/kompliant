@@ -18,7 +18,7 @@ Twelve machine-caught Class A findings, two machine flags, and further Class A f
 - **A2, line 3: "full-time job."** Job implies employment. Career, opportunity, career progression are the compliant forms. "Full-time" compounds it by implying an hours requirement.
 - **A1, line 6: "We provide full training and warm leads."** Provide implies required, required implies employment. The compliant forms: training available, leads made available.
 - **A11, line 5 and line 7: "Base pay" / "Salary review after 90 days."** Salary and wage vocabulary is banned. Compensation is commission. There is no base pay and no salary review in this structure; see also False Claims below.
-- **A4, line 8: "Monday through Friday, 9:00 AM to 2:00 PM."** check.py caught the clock time; the manual pass adds the stated weekly schedule. A stated time or schedule implies a time requirement, and a time requirement implies employment. Flexibility language is the compliant form.
+- **A4, line 8: "Monday through Friday, 9:00 AM to 2:00 PM."** A stated clock time and a fixed weekly schedule both imply a time requirement, and a time requirement implies employment. Flexibility language is the compliant form.
 - **A11, line 11: "our team of employees."** Employee is banned. Every agent in this structure is an independent contractor.
 - **Manual, line 9: "Report to your Regional Director."** Not machine-caught as such: "report to" asserts a supervisory reporting relationship, which is employment structure. An independent contractor does not report to anyone. This compounds the A8 title finding on the same line.
 
@@ -39,7 +39,7 @@ Twelve machine-caught Class A findings, two machine flags, and further Class A f
 
 ### Class B: FLAG (writer decides)
 
-- **B2, line 8: "Part-time schedules available."** Nothing in the early infrastructure supports a part-timer. Over-promise; flagged by the machine and sustained here. Note it fails twice: the part-time positioning is a B2 flag, and the specific schedule attached to it is an A4 block.
+- **B2, line 8: "Part-time schedules available."** Nothing in the early infrastructure supports a part-timer, so this is an over-promise. Note it fails twice: the part-time positioning is a B2 flag, and the specific schedule attached to it is an A4 block.
 - **B6, channel risk.** Every violation in this posting is platform-shaped: hiring platforms ask for job titles, salary ranges, schedules, and employer names, and this draft answered the platform instead of the rules. The rules are identical on every platform. A posting evading review is not a posting that passed it. Platform compensation fields should be set to commission, never a salary range.
 
 ### Class C: CRAFT (advisory)

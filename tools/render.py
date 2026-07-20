@@ -15,6 +15,12 @@ to the whole-document block.
 Excluded on purpose: the verbatim check.py output, the runtime-mode line,
 log-entry mechanics, and checklist internals. The audience is the writer.
 
+The audience line is enforced, not assumed: before writing, every note that
+would be emitted (margin and whole-document alike) is scanned for audit and
+tooling language. On a match the render refuses, names the finding, writes
+no HTML, and exits non-zero. The human fixes the review; this tool never
+strips or rewrites text.
+
 Stdlib only. Default output path: markup/<review-stem>.html.
 """
 
@@ -200,6 +206,35 @@ def parse_review(text):
                 flush()
     flush()
     return meta, verdict, notes, forms
+
+
+# ------------------------------------------------- writer-audience guard
+
+# Audit and tooling language never reaches the writer's copy. These terms
+# belong to the record (the review, the log), not to the markup view; the
+# scan covers only note text that would be emitted, so the review's verbatim
+# check.py section and mode line stay out of scope by construction.
+AUDIENCE_DENYLIST = (
+    "check.py",
+    "the machine",
+    "the checker",
+    "the scanner",
+    "selftest",
+    "exit code",
+    "argv",
+)
+
+
+def audience_violations(notes):
+    """Return (note, matched-term) pairs for notes carrying tooling language."""
+    hits = []
+    for note in notes:
+        fields = (note["title"], note["quote"], note["body"], note["section"])
+        text = " ".join(f for f in fields if f).lower()
+        for term in AUDIENCE_DENYLIST:
+            if term in text:
+                hits.append((note, term))
+    return hits
 
 
 # ------------------------------------------------------------------- html
@@ -521,6 +556,21 @@ def main(argv):
 
     blocks = parse_draft(draft_text)
     meta, verdict, notes, forms = parse_review(review_text)
+
+    violations = audience_violations(notes)
+    if violations:
+        print("render.py: REFUSED: tooling language in note text bound for "
+              "the writer's copy.", file=sys.stderr)
+        for note, term in violations:
+            label = " / ".join(note["ids"]) if note["ids"] else "unlabeled"
+            where = ("line %d" % note["line"]) if note["line"] \
+                else "whole document"
+            print('render.py:   %s, %s: matched "%s"' % (label, where, term),
+                  file=sys.stderr)
+        print("render.py: no HTML written. Fix the review wording and rerun; "
+              "this tool does not rewrite.", file=sys.stderr)
+        return 2
+
     anchorable = renderable_lines(blocks)
 
     if len(argv) == 4:
