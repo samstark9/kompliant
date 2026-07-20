@@ -1,8 +1,10 @@
 # Kompliant
 
-Kompliant is a compliance review module: one job, done with authority. It reviews recruiting copy for commission-only (1099) independent contractor sales roles in the insurance vertical, and refuses everything else. Open it in Claude Code and Claude becomes a home-office review desk that critiques recruiting materials against a real rulebook, with a deterministic checker standing behind the prose.
+Kompliant is a compliance review desk for recruiting marketing material in the commission-only 1099 insurance-sales world.
 
-The principle: word it correctly and show the proof trail. Every stated figure carries an asterisk; every asterisk resolves to a source on the same page. The critique log follows the same discipline: in this domain the documented review is the due-diligence record that protects the principal when a contractor's materials go bad. **The editor critiques. It never rewrites.** The full stance and rulebook live in `rules.md`.
+What it solves: independent agency recruiting marketing materials routinely drift into language that creates legal exposure for them and the carrier. Examples: a description that reads like a W-2 job when every agent is a 1099. Income figures that show the top as typical. Possible-outcome statements that could be interpreted as guarantees.
+
+To help reduce legal exposure, the desk critiques the marketing item: you get the violation and why. The ongoing critique log is the due-diligence record.
 
 **Grading or auditing it?** [`JUDGE_GUIDE.md`](./JUDGE_GUIDE.md) is a ten-minute cold eval: six tests, four of them pure Python, every expected output produced by running the test first.
 
