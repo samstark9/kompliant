@@ -43,6 +43,7 @@ kompliant/
 ├── identity.md        <- role card: what the desk is and refuses
 ├── rules.md           <- the canonical rulebook and output contract
 ├── examples.md        <- the canonical income-table correction, annotated critiques
+├── JUDGE_GUIDE.md     <- six-test cold eval for a stranger or judge
 ├── reference/
 │   ├── term-banks.md              <- machine-readable rules (check.py parses)
 │   ├── disclosure-mechanics.md    <- the proof-trail mechanics

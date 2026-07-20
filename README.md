@@ -57,12 +57,21 @@ Banned-term banks (parsed from `reference/term-banks.md`), clock-time and schedu
 ## Map
 
 ```
-identity.md                  who the desk is, what it reviews, what it refuses
-rules.md                     the canonical rulebook and output contract (single copy)
-examples.md                  the canonical income-table correction and annotated critiques
-reference/                   term banks, disclosure mechanics, checklist, intake interview,
-                             company profile + template, asset-types/
-inbox/ -> reviews/           the operating loop; reviewed drafts date-stamp into archive/
-memory/critique-log.md       the accreting review record (doubles as the due-diligence trail)
-tools/check.py               the deterministic gate; tools/fixtures/ its test corpus
+kompliant/
+├── CLAUDE.md               <- you are here: entry contract, the review loop, routing
+├── identity.md             who the desk is, what it reviews, what it refuses
+├── rules.md                the canonical rulebook and output contract (single copy)
+├── examples.md             the canonical income-table correction, annotated critiques
+├── JUDGE_GUIDE.md          six-test cold eval a stranger can run on a fresh clone
+├── reference/              the stable rules the desk applies
+│   ├── term-banks.md              machine-readable banned terms (check.py reads these)
+│   ├── disclosure-mechanics.md, verification-checklist.md, intake-interview.md
+│   ├── company-profile.md         the fabricated demo carrier (+ .template.md)
+│   └── asset-types/               flyer, job-posting, agency-website (+ template)
+├── inbox/ -> reviews/      the operating loop; a reviewed draft moves to archive/
+├── archive/                processed drafts, date-stamped
+├── memory/critique-log.md  the accreting review record (doubles as the due-diligence trail)
+└── tools/
+    ├── check.py            the deterministic gate
+    └── fixtures/           its test corpus (drafts + expected.json)
 ```
