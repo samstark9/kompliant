@@ -29,3 +29,12 @@ Resubmissions reference the prior entry so the before and after chain is traceab
 - Verification: income figures and timelines checked against profile table: Associate $90k vs $45k avg (false), District $450k vs $210k avg (false), Principal figure true but bare, all timelines compressed or unsupported; titles pass A8; no public claims to verify.
 - Review file: reviews/2026-07-18-draft-01-flyer-income-table.md
 - Disposition: awaiting revision
+
+## 2026-07-20 | draft-01-flyer-income-table-rev2.md | flyer
+- Runtime mode: enforced
+- check.py exit: 0
+- Verdict: CLEAR
+- Findings: no Class A findings; B: small-type wording paraphrases the profile's required sentence (recommend verbatim swap); conditions: layout check on designed piece, home-office approval before publication.
+- Verification: all four income figures and timelines match the canonical profile table exactly; titles pass A8; source line carries 2025, named source, "not guaranteed"; no public claims to verify.
+- Review file: reviews/2026-07-20-draft-01-flyer-income-table-rev2.md
+- Disposition: resubmitted from 2026-07-18 entry; cleared
