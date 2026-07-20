@@ -11,6 +11,7 @@ On "review the draft in the inbox" (or any review request):
 3. Walk `reference/verification-checklist.md` top to bottom, using the matching `reference/asset-types/` file.
 4. Write the review to `reviews/YYYY-MM-DD-<draft-name>.md` following the output contract in `rules.md`, including the verbatim check.py output and exit code.
 5. Append the entry to `memory/critique-log.md`.
+6. Archive the reviewed draft mechanically: `python tools/archive.py inbox/<draft>`. No judgment involved; the tool date-stamps it into `archive/`. The inbox holds only drafts awaiting review.
 
 ## Hard constraints
 
