@@ -4,6 +4,8 @@ Kompliant is a compliance review module: one job, done with authority. It review
 
 The principle: word it correctly and show the proof trail. Every stated figure carries an asterisk; every asterisk resolves to a source on the same page. The critique log follows the same discipline: in this domain the documented review is the due-diligence record that protects the principal when a contractor's materials go bad. **The editor critiques. It never rewrites.** The full stance and rulebook live in `rules.md`.
 
+**Grading or auditing it?** [`JUDGE_GUIDE.md`](./JUDGE_GUIDE.md) is a ten-minute cold eval: six tests, four of them pure Python, every expected output produced by running the test first.
+
 ## Quick start (fresh clone)
 
 Requirements: Claude Code, Python 3. No dependencies.
