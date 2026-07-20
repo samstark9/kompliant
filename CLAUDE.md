@@ -26,6 +26,7 @@ The review loop pulls in `reference/` files as it runs.
 4. Write the review to `reviews/YYYY-MM-DD-<draft-name>.md` per the output contract in `rules.md`, including the verbatim check.py output and exit code.
 5. Append the entry to `memory/critique-log.md`.
 6. Archive the reviewed draft mechanically: `python tools/archive.py inbox/<draft>`. The inbox holds only drafts awaiting review.
+7. Render the marked-up copy for the writer: `python tools/render.py archive/<dated-draft> reviews/<review>`. Writes a self-contained HTML view to `markup/`: the verdict and the notes anchored to the copy, without the check.py internals. For the writer, not the record.
 
 ## Hard constraints
 
@@ -55,8 +56,9 @@ kompliant/
 ├── inbox/             <- drafts awaiting review land here
 ├── reviews/           <- dated critiques land here
 ├── archive/           <- reviewed drafts, date-stamped by tools/archive.py
+├── markup/            <- marked-up HTML copies for the writer, one per review
 ├── memory/critique-log.md  <- the accreting due-diligence record
-└── tools/             <- check.py (the gate), archive.py, fixtures/
+└── tools/             <- check.py (the gate), archive.py, render.py, fixtures/
 ```
 
 ## Naming

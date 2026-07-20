@@ -21,7 +21,7 @@ That verifies the checker against the fixture corpus. Then:
 1. Open this folder in Claude Code. A fabricated demo company (Ambervale Life) is already on file in `reference/company-profile.md`.
 2. Copy a sample draft in: `tools/fixtures/drafts/draft-01-flyer-income-table.md` into `inbox/`.
 3. Say: **"review the draft in the inbox."**
-4. The dated critique lands in `reviews/`, and an entry is appended to `memory/critique-log.md`.
+4. The dated critique lands in `reviews/`, an entry is appended to `memory/critique-log.md`, and a marked-up copy for the writer is written to `markup/`.
 
 To onboard your own company, say **"onboard a new company"** and the desk runs the scripted interview in `reference/intake-interview.md`.
 
@@ -72,8 +72,10 @@ kompliant/
 │   └── asset-types/               flyer, job-posting, agency-website (+ template)
 ├── inbox/ -> reviews/      the operating loop; a reviewed draft moves to archive/
 ├── archive/                processed drafts, date-stamped
+├── markup/                 marked-up HTML copies for the writer, one per review
 ├── memory/critique-log.md  the accreting review record (doubles as the due-diligence trail)
 └── tools/
     ├── check.py            the deterministic gate
+    ├── render.py           the marked-up copy view for the writer
     └── fixtures/           its test corpus (drafts + expected.json)
 ```
