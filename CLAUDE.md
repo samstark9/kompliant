@@ -26,7 +26,7 @@ The review loop pulls in `reference/` files as it runs.
 4. Write the review to `reviews/YYYY-MM-DD-<draft-name>.md` per the output contract in `rules.md`, including the verbatim check.py output and exit code.
 5. Append the entry to `memory/critique-log.md`.
 6. Archive the reviewed draft mechanically: `python tools/archive.py inbox/<draft>`. The inbox holds only drafts awaiting review.
-7. Render the marked-up copy for the writer: `python tools/render.py archive/<dated-draft> reviews/<review>`. Writes a self-contained HTML view to `markup/`: the verdict and the notes anchored to the copy, without the check.py internals. For the writer, not the record.
+7. Render the marked-up copy for the writer: `python tools/render.py archive/<dated-draft> reviews/<review>`. Writes a self-contained HTML view to `markup/`: the verdict and the notes anchored to the copy, without the check.py internals. For the writer, not the record. If render.py exits non-zero, a note stated how the desk found an issue, such as a checker name, instead of what the writer must change. That belongs in the record, not this view. Edit the finding it names to keep only the editorial point, then run the command again. Repeat until it exits 0.
 
 ## Hard constraints
 
