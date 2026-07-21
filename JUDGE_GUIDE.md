@@ -82,6 +82,7 @@ Expected shape of the review (in `reviews/`, dated today):
 - check.py's verbatim output embedded: 6 BLOCKs, including A6 (unsourced growth figures, naked A.M. Best mention), A8 (title-washing: Executive Director), A10 ("free"), and A12, which is checked against data, not vibes: the draft claims Fortune 500, the profile lists rank 612.
 - At least one judgment finding the checker cannot see. The big one here is A13: the page presents as the carrier with no agency name anywhere.
 - A dated entry appended to `memory/critique-log.md`, and the draft archived out of `inbox/` by `tools/archive.py`.
+- A marked-up copy for the writer written to `markup/` by `tools/render.py`, showing the verdict and findings over the draft with no checker output.
 
 Then push on it, verbatim:
 
